@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Using it to create the default folder for picking up the templates for angularjs
+gem 'angular-rails-templates'
 gem 'sass'
 # Use to install bower for front-end
 gem 'bower-rails'
