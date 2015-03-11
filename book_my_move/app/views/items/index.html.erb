@@ -5,7 +5,10 @@
 <table>
   <thead>
     <tr>
-      <th>Subcategory</th>
+      <th>Subcategory ID</th>
+
+      <th>Item ID</th>
+
       <th>Item name</th>
       <th>Item desc</th>
       <th>Item image</th>
@@ -17,6 +20,9 @@
     <% @items.each do |item| %>
       <tr>
         <td><%= item.subcategory_id %></td>
+
+         <td><%= item.item_id %></td>
+
         <td><%= item.item_name %></td>
         <td><%= item.item_desc %></td>
         <td><%= image_tag item.item_image.url(:thumb) %></td>
