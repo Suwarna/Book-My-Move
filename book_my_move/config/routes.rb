@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  
+  
+
+
+
+  resources :registrations
+
   resources :items
 
   resources :categories
@@ -7,7 +14,9 @@ Rails.application.routes.draw do
 
   resources :admins
 
-  root 'home#index'
+  root 'registrations#index'
+ 
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
