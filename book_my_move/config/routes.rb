@@ -2,14 +2,7 @@ Rails.application.routes.draw do
 
   resources :feedbacks
 
- 
-  
-  
-
-
-
   resources :registrations
-
 
   resources :items
 
@@ -19,11 +12,8 @@ Rails.application.routes.draw do
 
   resources :admins
 
-  root 'feedbacks#index'
+  root 'home#index'
 
-  #root 'items/index'
-
-  root 'registrations#index'
  
 
 
