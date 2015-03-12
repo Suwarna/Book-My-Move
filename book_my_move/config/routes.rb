@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :feedbacks
 
   get 'registration/registration'
+=======
+  
+  
+
+
+
+  resources :registrations
+>>>>>>> c9dd31bb1ff003e66939723cc99fcc0696796041
 
   resources :items
 
@@ -11,9 +20,15 @@ Rails.application.routes.draw do
 
   resources :admins
 
+<<<<<<< HEAD
   root 'feedbacks#index'
 
   #root 'items/index'
+=======
+  root 'registrations#index'
+ 
+
+>>>>>>> c9dd31bb1ff003e66939723cc99fcc0696796041
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
