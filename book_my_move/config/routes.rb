@@ -18,12 +18,13 @@ Rails.application.routes.draw do
   resources :subcategories
 
   resources :admins
+  resources :home
 
   root 'feedbacks#index'
 
   #root 'items/index'
 
-  root 'registrations#index'
+  
  
 
 
