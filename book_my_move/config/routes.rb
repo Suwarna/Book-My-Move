@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :feedbacks
+
+  get 'registration/registration'
+
   resources :items
 
   resources :categories
@@ -7,7 +11,9 @@ Rails.application.routes.draw do
 
   resources :admins
 
-  root 'home#index'
+  root 'feedbacks#index'
+
+  #root 'items/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
