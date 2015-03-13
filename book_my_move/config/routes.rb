@@ -1,23 +1,5 @@
 Rails.application.routes.draw do
-
-  resources :feedbacks
-
-  resources :registrations
-
-  resources :items
-
-  resources :categories
-
-  resources :subcategories
-
-  resources :admins
-  #resources :home
-
   root 'home#index'
-
-
- 
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

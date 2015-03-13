@@ -39,5 +39,10 @@ bookmymove.controller('MapCtrl', ['$scope', function($scope){
       country: 'in'
     };    $scope.details3 = '';
 
+    $scope.zipfrom = '';
+    $scope.zipto = '';
+    $scope.from ='';
+    $scope.to = '';
+
     $scope.currentdate = new Date();
 }]);

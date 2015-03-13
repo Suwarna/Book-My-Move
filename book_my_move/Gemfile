@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-
-gem 'paperclip'
 # Using it to create the default folder for picking up the templates for angularjs
 gem 'angular-rails-templates'
 gem 'sass'
