@@ -1,9 +1,8 @@
 <div class="row">
-<div class='bg_div'>
+	<div class='bg_div'>
 	<div class="demo1">
-		<img src="assets/Truck.png" height='400px' width="600px">
+		<img src="assets/Truck.png" height='400px' width="625px">
 	</div>
-
 	<div class="demo">
 			<div class='get_started'>
 				<h4 class='titles'>Get Started..</h4>
@@ -12,18 +11,17 @@
 				<h4 class='titles'>Select Your Home Type..</h4>
 			</div>
 				<div class='house_types'>
-	               	<input type='radio' name='options' id='option1' class='big' autocomplete='off' checked/>
-	               	<span>apartment</span><br><br></span>
-					<input type='radio' name='options' id='option2' class='big' autocomplete='off' checked />
-					<span>condo<br><br></span>
-					<input type='radio' name='options' id='option3' class='big' autocomplete='off' checked />
-					<span>townhome<br><br></span>
-					<input type='radio' name='options' id='option4' class='big' autocomplete='off' checked />
-					<span>single-family house (attached)<br><br></span>
-					<input type='radio' name='options' id='option5' class='big' autocomplete='off' checked />
-					<span>single-family house (detached) </span>
-				  </div><!-- end of house type div -->
-				 <button type='button' class='btn btn-sm btn-primary btn_next'>next</button>
+					<md-radio-group>
+	               		<md-radio-button value="apartment" aria-label="apartment">apartment</md-radio-button>
+						<md-radio-button value="condo">condo</md-radio-button>
+						<md-radio-button value="townhome">townhome</md-radio-button>
+						<md-radio-button value="single-family house (attached)">single-family house (attached)</md-radio-button>
+						<md-radio-button value="single-family house (detached)">single-family house (detached)</md-radio-button>
+					</md-radio-group>
+				</div> <!--end of house type div -->		
+				<md-content md-theme="docs-dark">
+					<md-button ng-href="#/map" class='md-raised md-primary btn_next'>next</md-button>
+				</md-content>
 		</div><!-- end of demo div -->			
 </div>
 </div>

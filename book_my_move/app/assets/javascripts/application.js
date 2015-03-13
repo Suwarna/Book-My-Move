@@ -15,4 +15,9 @@
 //= require angular/angular
 //= require angular-route/angular-route
 //= require angular-rails-templates
+//= require angular-material/angular-material
+//= require angular-animate/angular-animate
+//= require angular-aria/angular-aria
+//= require angular-ui-date/src/date.js
+//= require jquery-ui/jquery-ui.js
 //= require_tree .
