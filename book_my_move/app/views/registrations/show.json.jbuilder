@@ -1,0 +1,1 @@
+json.extract! @registration, :id, :registration_fname, :registration_lname, :registration_email, :registration_mobile, :registration_landline, :registration_state, :registration_district, :registration_taluka, :registration_city, :registration_address, :registration_pincode, :registration_username, :registration_password, :registration_type, :created_at, :updated_at
