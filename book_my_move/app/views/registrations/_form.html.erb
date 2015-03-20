@@ -1,0 +1,73 @@
+<%= form_for(@registration) do |f| %>
+  <% if @registration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@registration.errors.count, "error") %> prohibited this registration from being saved:</h2>
+
+      <ul>
+      <% @registration.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :First_Name %><br>
+    <%= f.text_field :registration_fname %>
+  </div>
+  <div class="field">
+    <%= f.label :Last_Name %><br>
+    <%= f.text_field :registration_lname %>
+  </div>
+  <div class="field">
+    <%= f.label :Email %><br>
+    <%= f.text_field :registration_email %>
+  </div>
+  <div class="field">
+    <%= f.label :Mobile_Number %><br>
+    <%= f.text_field :registration_mobile %>
+  </div>
+  <div class="field">
+    <%= f.label :Landline_Number %><br>
+    <%= f.text_field :registration_landline %>
+  </div>
+  <div class="field">
+    <%= f.label :State %><br>
+    <%= f.text_field :registration_state %>
+  </div>
+  <div class="field">
+    <%= f.label :District %><br>
+    <%= f.text_field :registration_district %>
+  </div>
+  <div class="field">
+    <%= f.label :Taluka %><br>
+    <%= f.text_field :registration_taluka %>
+  </div>
+  <div class="field">
+    <%= f.label :City %><br>
+    <%= f.text_field :registration_city %>
+  </div>
+  <div class="field">
+    <%= f.label :Address %><br>
+    <%= f.text_area :registration_address %>
+  </div>
+  <div class="field">
+    <%= f.label :Pincode %><br>
+    <%= f.text_field :registration_pincode %>
+  </div>
+  <div class="field">
+    <%= f.label :Username %><br>
+    <%= f.text_field :registration_username %>
+  </div>
+  <div class="field">
+    <%= f.label :Password %><br>
+    <%= f.text_field :registration_password %>
+  </div>
+  <div class="field">
+    <%= f.label :User_Type %><br>
+    <%= f.text_field :registration_type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

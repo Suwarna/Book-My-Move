@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :requirement_items
 
   resources :requirements
@@ -12,6 +13,10 @@ post 'requirement_items/catchit' => 'requirement_items@catchit'
 
   get 'items/selectitems' => 'items#selectitems'
 
+  resources :feedbacks
+
+  resources :registrations
+
   resources :items
 
   resources :categories
@@ -19,9 +24,9 @@ post 'requirement_items/catchit' => 'requirement_items@catchit'
   resources :subcategories
 
   resources :admins
+  #resources :home
 
   root 'home#index'
-
 
 
   # The priority is based upon order of creation: first created -> highest priority.

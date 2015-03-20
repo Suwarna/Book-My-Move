@@ -30,6 +30,8 @@ protect_from_forgery unless: -> { request.format.json? }
       @selDitemsQty = params[:qty]  
       @selDitemsIsSel = params[:issel]
       
+
+      
       #to save the selected items...
       $selGlob = params[:issel]
       $selQty = params[:qty]
