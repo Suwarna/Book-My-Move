@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_item,  only: [:show, :edit, :update, :destroy]
+protect_from_forgery unless: -> { request.format.json? }
   # GET /items
   # GET /items.json
   def index
@@ -10,11 +10,29 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
+    # @item = Item.find(params[:id])
   end
 
   # GET /items/new
   def new
-    @item = Item.new
+   @item = Item.new 
+  end
+
+  def selectitems
+
+   
+      @selitems = Item.all
+   
+  end
+
+  def selecteditems
+   
+      @selDitemsQty = params[:qty]  
+      @selDitemsIsSel = params[:issel]
+      
+      #to save the selected items...
+      $selGlob = params[:issel]
+      $selQty = params[:qty]
   end
 
   # GET /items/1/edit

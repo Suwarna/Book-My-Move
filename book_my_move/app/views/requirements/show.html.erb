@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Requirement date:</strong>
+  <%= @requirement.requirement_date %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @requirement.client_id %>
+</p>
+
+<p>
+  <strong>Requirement from:</strong>
+  <%= @requirement.requirement_from %>
+</p>
+
+<p>
+  <strong>Requirement to:</strong>
+  <%= @requirement.requirement_to %>
+</p>
+
+<p>
+  <strong>Requirement lift:</strong>
+  <%= @requirement.requirement_lift %>
+</p>
+
+<p>
+  <strong>Requirement floor:</strong>
+  <%= @requirement.requirement_floor %>
+</p>
+
+<p>
+  <strong>Requirement parking:</strong>
+  <%= @requirement.requirement_parking %>
+</p>
+
+<p>
+  <strong>Requirement extra service:</strong>
+  <%= @requirement.requirement_extra_service %>
+</p>
+
+<p>
+  <strong>Requirement datetomove:</strong>
+  <%= @requirement.requirement_datetomove %>
+</p>
+
+<%= link_to 'Edit', edit_requirement_path(@requirement) %> |
+<%= link_to 'Back', requirements_path %>

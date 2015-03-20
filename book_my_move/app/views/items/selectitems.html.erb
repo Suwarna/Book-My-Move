@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Items</h1>
+
+
+<form name="fm" action= <%= items_selecteditems_path %> method="POST" >
+
+
+
+
+<table>form_tag('/posts/1', method: :put)
+  <thead>
+    <tr>
+      <th>Subcategory ID</th>
+      <th>Item ID</th>
+      <th>Item name</th>
+      <th>Item desc</th>
+      <th>Item image</th>
+      
+      <th>Sel</th>
+      <th>Qty</th>
+      
+
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @selitems.each do |item| %>
+      <tr>
+        <td><%= item.subcategory_id %></td>
+        <td><%= item.item_id %></td>
+        <td><%= item.item_name %></td>
+        <td><%= item.item_desc %></td>
+        <td><%= image_tag item.item_image.url(:thumb) %></td>
+        <td style="padding:50px"> <!-- <%= text_field("qty", item.item_id, size: 20) %>--> 
+         <%= select :qty, item.item_id , ["1","2","3","4","5","6","7","8","9","10"]%>
+         </td>
+
+        <td> <%= check_box "issel", item.item_id,  :style => " width: 40px; height: 40px;" %></td> 
+    <% end %>
+  </tbody>
+</table>
+<CENTER>
+<input type="Submit" VALUE="Next  >>">
+</CENTER>
+</form>
+

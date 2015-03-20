@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Requirement Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Requirement</th>
+      <th>Item</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @requirement_items.each do |requirement_item| %>
+      <tr>
+        <td><%= requirement_item.requirement %></td>
+        <td><%= requirement_item.item %></td>
+        <td><%= link_to 'Show', requirement_item %></td>
+        <td><%= link_to 'Edit', edit_requirement_item_path(requirement_item) %></td>
+        <td><%= link_to 'Destroy', requirement_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Requirement item', new_requirement_item_path %>

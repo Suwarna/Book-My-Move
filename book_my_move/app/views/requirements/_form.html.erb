@@ -1,0 +1,53 @@
+<%= form_for(@requirement) do |f| %>
+  <% if @requirement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@requirement.errors.count, "error") %> prohibited this requirement from being saved:</h2>
+
+      <ul>
+      <% @requirement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :requirement_date %><br>
+    <%= f.datetime_select :requirement_date %>
+  </div>
+  <div class="field">
+    <%= f.label :client_id %><br>
+    <%= f.text_field :client_id %>
+  </div>
+  <div class="field">
+    <%= f.label :requirement_from %><br>
+    <%= f.text_field :requirement_from %>
+  </div>
+  <div class="field">
+    <%= f.label :requirement_to %><br>
+    <%= f.text_field :requirement_to %>
+  </div>
+  <div class="field">
+    <%= f.label :requirement_lift %><br>
+    <%= f.text_field :requirement_lift %>
+  </div>
+  <div class="field">
+    <%= f.label :requirement_floor %><br>
+    <%= f.number_field :requirement_floor %>
+  </div>
+  <div class="field">
+    <%= f.label :requirement_parking %><br>
+    <%= f.text_field :requirement_parking %>
+  </div>
+  <div class="field">
+    <%= f.label :requirement_extra_service %><br>
+    <%= f.text_field :requirement_extra_service %>
+  </div>
+  <div class="field">
+    <%= f.label :requirement_datetomove %><br>
+    <%= f.datetime_select :requirement_datetomove %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

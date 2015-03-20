@@ -1,0 +1,28 @@
+<h3>Selected Items-</h3>
+<br><br>
+
+<% @selDitemsIsSel.each do |itemid, issel| %>
+<% if issel=="1" and @selDitemsQty[itemid].to_i >0 %>
+Item Id: <b><%= itemid %></b>&nbsp;&nbsp;&nbsp;
+Name: <b><%= Item.find(itemid).item_name %></b><b>&nbsp;&nbsp;&nbsp;
+<%= image_tag Item.find(itemid).item_image.url(:thumb) %>&nbsp;&nbsp;&nbsp;
+Quantity: <b><%= @selDitemsQty[itemid] %></b>
+<hr>
+<% end %>
+<% end %>
+
+
+
+<br><br>
+ <%= link_to 'SELECT MORE ITEMS', 'javascript:history.go(-1);' %>
+<br><br>
+
+<br><br>
+
+<CENTER>
+<%= 
+link_to "DONE?   MAKE REQUIREMENT!", requirement_items_catchit_path, :method => :post 
+%>
+</CENTER>
+
+<br><br>

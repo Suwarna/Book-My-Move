@@ -4,7 +4,10 @@
 class Item < ActiveRecord::Base
 	
   belongs_to :subcategory
+	
+	has_many :requirementitems
 
+	has_many :requirements, through: :requirementitems
 
 #attr_accessor :item_image_file_name       this only works in Rails 4
 has_attached_file :item_image,

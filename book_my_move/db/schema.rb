@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20150311055702) do
     t.string   "item_name",               limit: 45
     t.string   "item_desc",               limit: 45
     t.string   "subcategory_id",          limit: 45
-    t.string   "item_image",              limit: 45
+    t.string   "item_image",              limit: 500
     t.string   "item_image_file_name",    limit: 255
     t.string   "item_image_content_type", limit: 255
     t.integer  "item_image_file_size",    limit: 4
@@ -102,11 +102,12 @@ ActiveRecord::Schema.define(version: 20150311055702) do
   end
 
   create_table "requirement_items", primary_key: "requirement_id", force: :cascade do |t|
-    t.integer "item_id", limit: 4
+    t.integer "item_id",  limit: 4
+    t.integer "item_qty", limit: 4
   end
 
   create_table "requirements", primary_key: "requirement_id", force: :cascade do |t|
-    t.string   "requirement_date",          limit: 45
+    t.datetime "requirement_date"
     t.string   "requirement_from",          limit: 45
     t.string   "requirement_to",            limit: 45
     t.string   "requirement_lift",          limit: 1
@@ -118,9 +119,9 @@ ActiveRecord::Schema.define(version: 20150311055702) do
   end
 
   create_table "subcategories", primary_key: "subcategory_id", force: :cascade do |t|
-    t.string "subcategory_name", limit: 45
-    t.string "subcategory_desc", limit: 45
-    t.string "category_id",      limit: 45
+    t.string  "subcategory_name", limit: 45
+    t.string  "subcategory_desc", limit: 45
+    t.integer "category_id",      limit: 4
   end
 
   add_foreign_key "movetype_items", "items", primary_key: "item_id", name: "fk_movetype_item_2"

@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  resources :requirement_items
+
+  resources :requirements
+
+post 'requirement_items/catchit' => 'requirement_items@catchit'
+
+
+ get 'items/selecteditems' => 'items#selecteditems'
+ post 'items/selecteditems' => 'items#selecteditems'
+ 
+
+  get 'items/selectitems' => 'items#selectitems'
+
   resources :items
 
   resources :categories
@@ -8,6 +21,8 @@ Rails.application.routes.draw do
   resources :admins
 
   root 'home#index'
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -63,4 +78,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
 end

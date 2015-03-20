@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Requirements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Requirement date</th>
+      <th>Client</th>
+      <th>Requirement from</th>
+      <th>Requirement to</th>
+      <th>Requirement lift</th>
+      <th>Requirement floor</th>
+      <th>Requirement parking</th>
+      <th>Requirement extra service</th>
+      <th>Requirement datetomove</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @requirements.each do |requirement| %>
+      <tr>
+        <td><%= requirement.requirement_date %></td>
+        <td><%= requirement.client_id %></td>
+        <td><%= requirement.requirement_from %></td>
+        <td><%= requirement.requirement_to %></td>
+        <td><%= requirement.requirement_lift %></td>
+        <td><%= requirement.requirement_floor %></td>
+        <td><%= requirement.requirement_parking %></td>
+        <td><%= requirement.requirement_extra_service %></td>
+        <td><%= requirement.requirement_datetomove %></td>
+        <td><%= link_to 'Show', requirement %></td>
+        <td><%= link_to 'Edit', edit_requirement_path(requirement) %></td>
+        <td><%= link_to 'Destroy', requirement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Requirement', new_requirement_path %>
